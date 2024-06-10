@@ -7,8 +7,10 @@ Features
 --------
 
 - Scrapes room rate data including room name, rate name, number of guests, cancellation policy, price, whether it's a top deal, and currency.
-- Generates check-in and check-out dates.
+- Additionally, the scraper collects absolutely all data about hotel rooms that comes from the backend of the site.
+- Collects hotel_id check-in and check-out dates from the url to `Checkin_Checkout/checkin_checkout_dates.csv` (25 different combinations).
 - Saves data in JSON and CSV formats.
+- P.S: in my case the site could only be opened via VPN.
 
 Requirements
 ------------
@@ -51,8 +53,9 @@ The script will perform the following actions:
 1. Navigate to the Qantas Hotels webpage.
 2. Simulate random cursor movements to mimic real user behavior.
 3. Capture network responses to extract room rate data via the hidden API.
-4. Save the extracted data to `rates.json`.
-5. Generate check-in and check-out dates and save them to `Checkin_Checkout/checkin_checkout_dates.csv`.
+4. Save the required data to `rates.json`.
+5. Save all data about hotel rooms to `response.json`
+6. Collects hotel_id check-in and check-out dates from the url and save them to `Checkin_Checkout/checkin_checkout_dates.csv`.
 
 
 
